@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title><%= titre %></title>
     <%= csrf_meta_tag %>
-    <%= stylesheet_link_tag ('bootstrap/less/bootstrap', :media => 'screen') # les parenthèses sont optionnelles %>
-    <%= stylesheet_link_tag 'bootstrap/less/print',  :media => 'print' %>
+    <%= render 'layouts/stylesheets' %>
   </head>
+
   <body>
-    <%= yield %>
+  	<div class="container">
+
+  		<%= render 'layouts/header' %>
+
+	  	<section class="round">
+	  		<%= yield %>
+	  	</section>
+
+	  	<%= render 'layouts/footer' %>
+
+  	</div>
   </body>
+
 </html>
