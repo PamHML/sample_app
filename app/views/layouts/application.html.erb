@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple App du Tutoriel Ruby on Rails | <%= @titre %></title>
+    <title><%= titre %></title>
     <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag ('bootstrap/less/bootstrap', :media => 'screen') # les parenthèses sont optionnelles %>
+    <%= stylesheet_link_tag 'bootstrap/less/print',  :media => 'print' %>
   </head>
   <body>
     <%= yield %>
