@@ -21,4 +21,9 @@ require 'spec_helper'
 	    get '/help'
 	    response.should have_selector('title', :content => "Aide")
 	  end
+
+	  it "devrait trouver une page s'inscription à '/signup'" do
+	    get '/signup'
+	    response.should have_selector('title', :content => "Inscription")
+	  end
 	end
